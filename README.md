@@ -5,21 +5,20 @@ Base on crawler result web path scanner.
 
 For a url which is a directory: http://test.com/a/, it will try to get:
 
-- http://test.com/a.zip
-
-- http://test.com/a.rar
-
-- http://test.com/a.tar.gz
-
-- ...
+```
+http://test.com/a.zip
+http://test.com/a.rar
+http://test.com/a.tar.gz
+...
+```
 
 For a url which is a file: http://test.com/b.php, it will try to get:
 
-- http://test.com/b.php.bak
-
-- http://test.com/b.php.1
-
-- ...
+```
+http://test.com/b.php.bak
+http://test.com/b.php.1
+...
+```
 
 Install
 ========
@@ -37,7 +36,7 @@ Example
 ========
 
 ```
-$ python bcrpscan.py -i t_url 
+$ python bcrpscan.py -i test_urls
 2014-04-20 19:43:03,484  INFO: http://192.168.1.6/test
 2014-04-20 19:43:13,625  INFO: http://192.168.1.6/test67187c0f
 2014-04-20 19:43:13,632  INFO: http://192.168.1.6/test.tar.gz
