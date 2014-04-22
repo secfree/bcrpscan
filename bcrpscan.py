@@ -49,7 +49,7 @@ def probe_url(url):
     if url[-1] != '/':
         code, rurl, length = get_url(url)
         durl = '%s/' % url
-        if code/100 == 3 and rurl.startswith(durl):
+        if code/100 == 3 and rurl and rurl.startswith(durl):
             url = durl
 
     pr = urlparse.urlparse(url)
@@ -365,7 +365,7 @@ def th_get_real_url(url,
         lock.acquire()
         real_urls.append(url)
         lock.release()
-    elif code/100 == 3 and rurl.startswith(durl):
+    elif code/100 == 3 and rurl and rurl.startswith(durl):
         lock.acquire()
         real_urls.append(durl)
         lock.release()
