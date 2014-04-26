@@ -24,7 +24,7 @@ import pycurl
 
 COOKIE = ''
 DIR_PROBE_EXTS = ['.tar.gz', '.zip', '.rar', '.tar.bz2']
-FILE_PROBE_EXTS = ['.bak', '.1']
+FILE_PROBE_EXTS = ['.bak', '.swp', '.1']
 NOT_EXIST = hashlib.md5("not_exist").hexdigest()[8:16]
 
 
